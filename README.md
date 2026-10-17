@@ -6,6 +6,12 @@
 
 Распакуйте архив и откройте index.html. Для более точной проверки можно запустить в папке сайта `python -m http.server 8080` и открыть http://localhost:8080. Копирование в буфер работает на HTTPS и localhost. При недоступном буфере сайт открывает окно с текстом правил.
 
+## GitHub Pages
+
+В репозитории уже добавлен workflow `.github/workflows/pages.yml`. После включения GitHub Pages с источником **GitHub Actions** сайт будет публиковаться автоматически при каждом обновлении ветки `main`. Ожидаемый адрес: `https://inpeacedTeams.github.io/EpicEventMineBlaze/`.
+
+Если GitHub попросит выбрать источник, открой Settings -> Pages -> Build and deployment -> Source -> GitHub Actions.
+
 ## Cloudflare Pages
 
 Создайте проект Pages с прямой загрузкой статических файлов (Direct Upload). Загрузите распакованное содержимое папки, чтобы index.html находился в корне публикации. Для этого сайта не нужен Worker, Supabase или команда сборки. При Git-развёртывании выберите статический проект без сборки и укажите корень с index.html как папку публикации.
